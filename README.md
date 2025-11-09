@@ -67,7 +67,7 @@ graph LR
 | **Frontend**        | React.js, Tailwind CSS, Recharts, Lucide React                                | Rapid UI development with pre-built components and responsive design. Recharts offers easy integration for data visualization.                                                                   |
 | **Backend**         | Flask (Python)                                                                | Lightweight, minimal boilerplate, and seamless integration with Python data science libraries.                                                                                                   |
 | **Data Processing** | Pandas, NumPy                                                                 | High-performance in-memory data manipulation for statistical analysis and anomaly detection.                                                                                                     |
-| **AI Engine**       | Google Gemini API (gemini-flash-latest) Category-level Isolation Forest Model | Fast inference speeds suitable for real-time chat and structured JSON generation. Suitable for the time constraints. Doesn’t require labeled datasets. Input raw data and get immediate results. |
+| **AI Engine**       | Google Gemini API (gemini-flash-latest) <br><br> Category-level Isolation Forest Model | Fast inference speeds suitable for real-time chat and structured JSON generation. <br><br> Suitable for the time constraints. Doesn’t require labeled datasets. Input raw data and get immediate results. |
 | **Data Storage**    | CSV (Read-Only) \+ In-Memory Python Objects                                   | Zero-setup "database" for immediate read access, prioritizing speed over persistence.                                                                                                            |
 
 ## **3\. Key Features**
@@ -106,7 +106,7 @@ Before data reaches the LLM, it is processed deterministically to provide ground
 
 ### **4.2** **Generative AI Layer (Gemini Personas)**
 
-    Interprets the deterministic data provided by the financial intelligence engine into human-friendly financial insights, detects nuanced patterns like “gray charges” based on vendor names, and translates natural language into structured chart configurations. The system uses distinct system prompts to create specialized AI “agents”:
+Interprets the deterministic data provided by the financial intelligence engine into human-friendly financial insights, detects nuanced patterns like “gray charges” based on vendor names, and translates natural language into structured chart configurations. The system uses distinct system prompts to create specialized AI “agents”:
 
 1. The Coach: Friendly, non-judgemental persona for general chat and insights.
 2. The Forensic Accountant: Specialized prompt optimized for high-recall detection of subscriptions and “gray charges”.
