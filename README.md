@@ -1,5 +1,7 @@
 # **Optifi \- AI Financial Coach** **Design Documentation**
 
+DEMO: https://www.youtube.com/watch?v=PjrtHv9MCA8
+
 ## **Problem Statement:**
 
 Many people struggle with personal finance due to a lack of visibility and personalized, actionable advice. Manually tracking every expense is tedious, and generic budgeting apps often fail to inspire lasting behavioral change. As a result, people are often unaware of wasteful spending habits, miss opportunities to save, and feel anxious about their financial future.
