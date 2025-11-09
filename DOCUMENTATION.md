@@ -2,6 +2,8 @@
 
 DEMO: https://www.youtube.com/watch?v=PjrtHv9MCA8
 
+<img width="1383" height="1293" alt="image" src="https://github.com/user-attachments/assets/9d668888-9ec5-4ece-9315-66e49c9cddfd" />
+
 ## **Problem Statement:**
 
 Many people struggle with personal finance due to a lack of visibility and personalized, actionable advice. Manually tracking every expense is tedious, and generic budgeting apps often fail to inspire lasting behavioral change. As a result, people are often unaware of wasteful spending habits, miss opportunities to save, and feel anxious about their financial future.
