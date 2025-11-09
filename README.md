@@ -167,7 +167,7 @@ Interprets the deterministic data provided by the financial intelligence engine 
   
 ## **10\. Key Learnings**
 
-1. Relying solely on LLms for financial math is risky. Combining deterministic ML with Generative AI provides a much more reliable and trustworthy user experience than using either in isolation.
+1. Relying solely on LLMs for financial math is risky. Combining deterministic ML with Generative AI provides a much more reliable and trustworthy user experience than using either in isolation.
 2. Structured outputs are essential for GenAI. Forcing Gemini to return strict JSON for visualizations and subscription detection was critical for integration with the frontend
 3. Limiting context window was a necessary trade-off between maintaining conversation coherence and managing latency/token costs.
 4. Rate limits get blow through very quick when working with LLMs. Important to use mock data to avoid wasting tokens in unnecessary LLM calls.
