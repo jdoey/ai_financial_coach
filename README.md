@@ -6,7 +6,7 @@ Many people struggle with personal finance due to a lack of visibility and perso
 
 ## **1\. Design Overview**
 
-Optifi is an AI-powered financial intelligence platform designed to provide personalized, actionable insights to young adults and gig workers. The system ingests raw transaction data and uses a hybrid approach of deterministic rules and Generative AI to offer behavioral nudges, subscription detection, goal forecasting, and on-demand data visualization. Users can interact with an AI Financial Coach via text chat and get insights to their spending, budgeting, and saving goals and use natural language to generate data visualizations of their finances.
+Optifi is an AI-powered financial intelligence platform designed to provide personalized, actionable insights to young adults and gig workers. The system ingests raw transaction data and uses a hybrid approach of deterministic rules and Generative AI to offer financial insights, anomaly detection, subscription detection, goal forecasting, and on-demand data visualization. Users can interact with an AI Financial Coach via text chat and get insights to their spending, budgeting, and saving goals and use natural language to generate data visualizations of their finances.
 
 ### **1.1 Architecture Diagram**
 
