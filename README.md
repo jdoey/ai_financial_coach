@@ -2,8 +2,6 @@
 
 DEMO: https://www.youtube.com/watch?v=PjrtHv9MCA8
 
-<img width="1383" height="1293" alt="image" src="https://github.com/user-attachments/assets/9d668888-9ec5-4ece-9315-66e49c9cddfd" />
-
 ## Getting Started
 
 These instructions will guide you through setting up and running the application on your local machine using Docker.
