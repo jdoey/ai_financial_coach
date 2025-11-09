@@ -50,6 +50,9 @@ def load_transactions_from_csv(filename="transactions.csv"):
 
 TRANSACTIONS_DB = load_transactions_from_csv()
 
+df = pd.read_csv(os.path.join(DATA_DIR, "transactions.csv"), parse_dates=['date'])
+ML_RESULTS = analyze_transactions(df)
+
 
 def detect_income_type(df: pd.DataFrame):
     """
@@ -229,7 +232,7 @@ genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
 
 # Initialize the model with the system prompt and use the 'gemini-flash-latest'
 model = genai.GenerativeModel(
-    'gemini-2.5-flash-lite',
+    'gemini-flash-latest',
     system_instruction=SYSTEM_PROMPT
 )
 viz_model = genai.GenerativeModel(
@@ -496,6 +499,74 @@ def extract_goal_from_message(message: str):
 
     return None
 
+@app.route('/api/analyze', methods=['POST'])
+def analyze_spending():
+    """
+    Main analysis endpoint. Runs statistical analysis first, 
+    then summarizes findings with AI.
+    """
+    try:
+        anomalies = ML_RESULTS.get("anomalies", [])
+
+        llm_prompt = f"""
+        You are an intelligent Financial Transaction Detective.
+        Your goal is to interpret "anomalous" transactions flagged by a statistical model and explain them to a regular user in plain, helpful English.
+
+        ### INPUT DATA
+        Raw Anomalies Detected: {json.dumps(anomalies)}
+
+        ### ANALYSIS GOALS
+        1. **Categorize the Anomaly:** For each flagged transaction, determine *why* it might be weird based on standard financial patterns:
+            * **Massive One-off:** A unusually large single purchase (e.g., buying a laptop).
+            * **Category Spike:** Spending way more than usual in a specific category (e.g., $500 dining out in one weekend).
+            * **Potential Duplicate:** Same amount, same vendor, very close dates.
+            * **Subscription Creep:** A recurring charge that suddenly increased in price.
+            * **Odd Timing:** A large transaction at 3 AM or on a holiday (potential fraud indicator).
+
+        2. **Prioritize:** Identify the top 1-3 most important anomalies the user *needs* to see first.
+
+        ### OUTPUT FORMAT
+        Return a strictly valid JSON object with two parts:
+        1.  `"summary"`: A 1-sentence high-level overview of the findings.
+        2.  `"explanations"`: An array of objects for the top 3 most critical anomalies, each containing:
+            * `"transaction_id"`: The original ID.
+            * `"human_explanation"`: A short, non-technical phrase explaining *why* it was flagged (e.g., "This is 4x your normal grocery run" or "Looks like a potential double-charge").
+            * `"suggested_action"`: A 2-3 word action (e.g., "Verify Receipt", "Contact Vendor", "Monitor").
+
+        ### EXAMPLE OUTPUT (Structure Only):
+        {{
+        "summary": "I found 3 unusual transactions this week, mostly related to high tech spending and one potential duplicate charge.",
+        "explanations": [
+            {{
+            "transaction_id": 1042,
+            "human_explanation": "Unusually high for a 'Coffee' purchase ($85.00).",
+            "suggested_action": "Verify amount"
+            }},
+            {{
+            "transaction_id": 1055,
+            "human_explanation": "Potential duplicate charge - detected twice on Nov 12th.",
+            "suggested_action": "Dispute one"
+            }}
+        ]
+        }}
+        """
+        # 3. Generate AI Summary of the ML results
+        llm_response = model.generate_content(llm_prompt)
+        if "error" in llm_response:
+             print(f"LLM Summary Error: {llm_response['error']}")
+             # Fallback: return ML results even if LLM fails
+             llm_response = {"insight": "AI summary temporarily unavailable."}
+        
+        return jsonify({
+            "raw_insights": ML_RESULTS.get("insights", []),
+            "anomalies": ML_RESULTS.get("anomalies", []),
+            "summary": llm_response.text.strip()
+        })
+
+    except Exception as e:
+        print(f"Critical Analysis Failure: {e}")
+        return jsonify({"error": f"Analysis failed: {str(e)}"}), 500
+
 CHAT_HISTORY = {} # key: session_id, value: list of {"role": "user"/"assistant", "content": str}
 
 @app.route('/api/chat', methods=['POST'])
@@ -519,10 +590,8 @@ def chat():
         CHAT_HISTORY[session_id] = []
 
     # --- 1. Load transactions and analyze anomalies ---
-    df = pd.read_csv(os.path.join(DATA_DIR, "transactions.csv"), parse_dates=['date'])
-    ml_results = analyze_transactions(df)
-    anomalies = ml_results.get("anomalies", [])
-    raw_insights = ml_results.get("insights", [])
+    anomalies = ML_RESULTS.get("anomalies", [])
+    raw_insights = ML_RESULTS.get("insights", [])
 
      # --- Detect savings goal ---
     goal_data = extract_goal_from_message(user_message)
@@ -560,7 +629,7 @@ def chat():
     2. ALWAYS reference the "Financial Data" above to personalize your response. Do not give generic advice.
     3. FORECAST RULE: ALWAYS assume target dates are in the FUTURE. If a user says a date that has already passed this year (like "March 9th"), assume they mean NEXT YEAR.
     4. If the user asks for financial advice, provide 1 short actionable tip with a numeric or measurable focus and potential savings.
-    5. If the user asks for anomalies, provide 1-2 instances of anomalous transactions.
+    5. If the user asks for anomalies, provide 1-2 instances of anomalous transactions and their details.
     6. Stay under 3 sentences.
     """
     llm_response = model.generate_content(llm_prompt)

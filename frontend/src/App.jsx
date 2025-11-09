@@ -9,6 +9,7 @@ import {
   Calendar,
   Search,
   AlertCircle,
+  AlertOctagon,
   CheckCircle2,
   Receipt,
   Shirt,
@@ -28,6 +29,7 @@ import {
   RefreshCcw,
   Activity,
   Scale,
+  Info,
 } from "lucide-react";
 import {
   PieChart,
@@ -274,6 +276,8 @@ const COLORS = [
 
 function App() {
   const [transactions, setTransactions] = useState([]);
+  const [activeTxTab, setActiveTxTab] = useState("recent");
+  // Chat bot states
   const [chatHistory, setChatHistory] = useState([
     {
       role: "ai",
@@ -285,15 +289,23 @@ function App() {
   const [isChatLoading, setIsChatLoading] = useState(false);
   const chatContainerRef = useRef(null);
 
-  // New state for stats
+  // Stats states
   const [stats, setStats] = useState(null);
   const [isLoadingStats, setIsLoadingStats] = useState(true);
 
+  // Anomaly states
+  const [anomalies, setAnomalies] = useState([]);
+  const [isLoadingAnomalies, setIsLoadingAnomalies] = useState(true);
+  const [anomalyExplanations, setAnomalyExplanations] = useState({});
+
+  // Goal forecast states
   const [goalName, setGoalName] = useState("");
   const [goalAmount, setGoalAmount] = useState("");
   const [goalDate, setGoalDate] = useState("");
   const [forecast, setForecast] = useState(null);
   const [isLoadingForecast, setIsLoadingForecast] = useState(false);
+
+  // Subscription detector states
   const [subscriptions, setSubscriptions] = useState([]);
   const [isLoadingSubscriptions, setIsLoadingSubscriptions] = useState(false);
 
@@ -320,7 +332,8 @@ function App() {
   useEffect(() => {
     handleCheckSubscriptions();
     fetchTransactions();
-    fetchStats(); // New fetch call
+    fetchStats();
+    fetchAnomalies();
   }, []);
 
   const fetchStats = async () => {
@@ -333,6 +346,28 @@ function App() {
       console.error("Failed to fetch stats:", e);
     } finally {
       setIsLoadingStats(false);
+    }
+  };
+
+  const fetchAnomalies = async () => {
+    setIsLoadingAnomalies(true);
+    try {
+      const res = await fetch("/api/analyze", { method: "POST" });
+      const data = await res.json();
+      if (data.anomalies) {
+        console.log(data);
+        setAnomalies(data.anomalies);
+
+        const explanationMap = data.anomalies.reduce((acc, item) => {
+          acc[item.id] = item.flag_reasons.join(", ");
+          return acc;
+        }, {});
+        setAnomalyExplanations(explanationMap);
+      }
+    } catch (e) {
+      console.error("Failed to fetch anomalies:", e);
+    } finally {
+      setIsLoadingAnomalies(false);
     }
   };
 
@@ -610,7 +645,6 @@ function App() {
           <p className="text-lg text-gray-400">Your AI-powered finance guide</p>
         </header>
 
-        {/* Pass stats and loading state to the new dumb component */}
         <FinancialStats stats={stats} isLoading={isLoadingStats} />
 
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-8 flex-1">
@@ -752,7 +786,7 @@ function App() {
                   <p>Scanning...</p>
                 </div>
               ) : (
-                <div className="space-y-3 animate-in fade-in duration-300 overflow-y-auto pr-2 custom-scrollbar max-h-[300px]">
+                <div className="space-y-3 animate-in fade-in duration-300 overflow-y-auto pr-2 custom-scrollbar max-h-[590px]">
                   <div className="flex justify-between items-center mb-2">
                     <p className="text-sm text-gray-400">
                       {subscriptions.length} found
@@ -838,54 +872,132 @@ function App() {
             </section>
             <div className="flex flex-col h-full min-h-0">
               <section className="bg-gray-900 p-6 rounded-2xl border border-gray-800 shadow-xl h-full flex flex-col overflow-hidden max-h-[80vh]">
-                <h2 className="text-2xl font-bold mb-4 flex items-center">
-                  <Receipt className="w-6 h-6 mr-2" />
-                  Recent Transactions
-                </h2>
-                <div className="mb-4 relative">
-                  <Search className="w-5 h-5 absolute left-3 top-3 text-gray-500" />
-                  <input
-                    type="text"
-                    placeholder="Search transactions..."
-                    value={searchTerm}
-                    onChange={(e) => setSearchTerm(e.target.value)}
-                    className="w-full pl-10 pr-4 py-3 bg-gray-950 border border-gray-800 rounded-xl focus:ring-2 focus:ring-blue-500 outline-none text-gray-100"
-                  />
+                <div className="flex items-center justify-between mb-4">
+                  <h2 className="text-2xl font-bold flex items-center">
+                    <Receipt className="w-6 h-6 mr-2" />
+                    Transactions
+                  </h2>
+                  {/* NEW: Tab Buttons */}
+                  <div className="flex space-x-2 bg-gray-950/50 p-1 rounded-lg border border-gray-800/50">
+                    <button
+                      onClick={() => setActiveTxTab("recent")}
+                      className={`px-3 py-1.5 text-sm font-medium rounded-md transition-colors ${
+                        activeTxTab === "recent"
+                          ? "bg-gray-800 text-white"
+                          : "text-gray-400 hover:text-gray-200"
+                      }`}
+                    >
+                      All
+                    </button>
+                    <button
+                      onClick={() => setActiveTxTab("unusual")}
+                      className={`px-3 py-1.5 text-sm font-medium rounded-md transition-colors flex items-center ${
+                        activeTxTab === "unusual"
+                          ? "bg-red-900/40 text-red-200"
+                          : "text-gray-400 hover:text-red-300"
+                      }`}
+                    >
+                      {anomalies.length > 0 && (
+                        <span className="w-2 h-2 bg-red-500 rounded-full mr-2 animate-pulse" />
+                      )}
+                      Unusual
+                    </button>
+                  </div>
                 </div>
+
+                {/* CONDITIONAL SEARCH: Hide search when in Unusual mode if you prefer, but keeping it for now */}
+                {activeTxTab === "recent" && (
+                  <div className="mb-4 relative">
+                    <Search className="w-5 h-5 absolute left-3 top-3 text-gray-500" />
+                    <input
+                      type="text"
+                      placeholder="Search transactions..."
+                      value={searchTerm}
+                      onChange={(e) => setSearchTerm(e.target.value)}
+                      className="w-full pl-10 pr-4 py-3 bg-gray-950 border border-gray-800 rounded-xl focus:ring-2 focus:ring-blue-500 outline-none text-gray-100"
+                    />
+                  </div>
+                )}
+
                 <div className="space-y-3 overflow-y-auto pr-2 flex-1 min-h-0 custom-scrollbar">
-                  {filteredTransactions.length > 0 ? (
-                    filteredTransactions.map((tx) => (
-                      <div
-                        key={tx.id}
-                        className="flex items-center justify-between p-4 bg-gray-950 rounded-xl border border-gray-800/50 hover:border-gray-700 transition-colors"
-                      >
-                        <div className="flex items-center space-x-4">
-                          <div className="p-3 bg-gray-900 rounded-lg border border-gray-800">
-                            <CategoryIcon category={tx.category} />
-                          </div>
-                          <div>
-                            <p className="font-medium text-gray-200">
-                              {tx.description}
-                            </p>
-                            <p className="text-sm text-gray-500">{tx.date}</p>
-                          </div>
-                        </div>
-                        <p
-                          className={`font-semibold ${
-                            tx.type === "deposit"
-                              ? "text-emerald-400"
-                              : "text-gray-100"
-                          }`}
+                  {activeTxTab === "recent" ? (
+                    // STANDARD TRANSACTION LIST
+                    filteredTransactions.length > 0 ? (
+                      filteredTransactions.map((tx) => (
+                        <div
+                          key={tx.id}
+                          className="flex items-center justify-between p-4 bg-gray-950 rounded-xl border border-gray-800/50 hover:border-gray-700 transition-colors"
                         >
-                          {tx.type === "deposit" ? "+" : "-"}$
-                          {tx.amount.toFixed(2)}
-                        </p>
+                          <div className="flex items-center space-x-4">
+                            <div className="p-3 bg-gray-900 rounded-lg border border-gray-800">
+                              <CategoryIcon category={tx.category} />
+                            </div>
+                            <div>
+                              <p className="font-medium text-gray-200">
+                                {tx.description}
+                              </p>
+                              <p className="text-sm text-gray-500">{tx.date}</p>
+                            </div>
+                          </div>
+                          <p
+                            className={`font-semibold ${
+                              tx.type === "deposit"
+                                ? "text-emerald-400"
+                                : "text-gray-100"
+                            }`}
+                          >
+                            {tx.type === "deposit" ? "+" : "-"}$
+                            {tx.amount.toFixed(2)}
+                          </p>
+                        </div>
+                      ))
+                    ) : (
+                      <div className="text-center text-gray-500 py-8">
+                        No transactions found.
+                      </div>
+                    )
+                  ) : (
+                    // UNUSUAL (ANOMALY) LIST
+                    anomalies.map((tx, index) => (
+                      <div
+                        key={`anomaly-${index}`}
+                        // changed: 'items-center' to 'items-start' for better vertical alignment when expanded
+                        // added: 'flex-col' to allow stacking standard details above the explanation
+                        className="group flex flex-col p-4 bg-red-950/10 rounded-xl border border-red-900/30 hover:border-red-500/50 hover:bg-red-950/20 transition-all duration-300 animate-in fade-in cursor-help"
+                      >
+                        {/* Top Row: Standard Details */}
+                        <div className="flex items-center justify-between w-full">
+                          <div className="flex items-center space-x-4">
+                            <div className="p-3 bg-red-900/20 rounded-lg border border-red-800/30 group-hover:border-red-500/50 transition-colors">
+                              <AlertOctagon className="w-5 h-5 text-red-400" />
+                            </div>
+                            <div>
+                              <p className="font-medium text-red-100">
+                                {tx.description}
+                              </p>
+                              <p className="text-sm text-red-400/60">
+                                {tx.date}
+                              </p>
+                            </div>
+                          </div>
+                          <p className="font-bold text-red-400">
+                            -${tx.amount.toFixed(2)}
+                          </p>
+                        </div>
+
+                        {/* Bottom Row: Explanation (Reveals on hover) */}
+                        {anomalyExplanations[tx.id] && (
+                          <div className="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-all duration-300 ease-in-out">
+                            <div className="overflow-hidden">
+                              <div className="mt-3 pt-3 border-t border-red-900/30 flex items-start space-x-2 text-sm text-red-200/90">
+                                <Info className="w-4 h-4 text-red-400 flex-shrink-0 mt-0.5" />
+                                <span>{anomalyExplanations[tx.id]}</span>
+                              </div>
+                            </div>
+                          </div>
+                        )}
                       </div>
                     ))
-                  ) : (
-                    <div className="text-center text-gray-500 py-8">
-                      No transactions found.
-                    </div>
                   )}
                 </div>
               </section>
