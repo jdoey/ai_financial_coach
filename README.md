@@ -106,7 +106,7 @@ Before data reaches the LLM, it is processed deterministically to provide ground
 
 ### **4.2** **Generative AI Layer (Gemini Personas)**
 
-    Interprets the deterministic data provided by the financial intelligence engine into human-friendly financial insights, detects nuanced patterns like “gray charges” based on vendor names, and translates natural language into structured chart configurations. The system uses distinct system prompts to create specialized AI “agents”:
+Interprets the deterministic data provided by the financial intelligence engine into human-friendly financial insights, detects nuanced patterns like “gray charges” based on vendor names, and translates natural language into structured chart configurations. The system uses distinct system prompts to create specialized AI “agents”:
 
 1. The Coach: Friendly, non-judgemental persona for general chat and insights.
 2. The Forensic Accountant: Specialized prompt optimized for high-recall detection of subscriptions and “gray charges”.
