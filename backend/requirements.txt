@@ -1,0 +1,10 @@
+flask
+flask-cors
+pandas
+requests
+google-generativeai
+python-dotenv
+scikit-learn
+datetime
+dateparser
+python-dateutil

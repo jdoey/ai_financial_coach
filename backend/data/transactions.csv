@@ -1,0 +1,501 @@
+id,date,description,type,amount,category
+1,2025-01-01,Rent Payment,withdrawal,1500.00,Housing
+2,2025-01-01,Spotify Premium,withdrawal,10.99,Subscription
+3,2025-01-01,Planet Fitness,withdrawal,24.99,Health
+4,2025-01-02,Starbucks #5542,withdrawal,6.45,Coffee
+5,2025-01-02,Safeway,withdrawal,89.30,Groceries
+6,2025-01-03,Paycheck Deposit,deposit,3000.00,Income
+7,2025-01-03,Apple Store,withdrawal,25.00,Shopping
+8,2025-01-04,Chevron Gas,withdrawal,45.50,Transport
+9,2025-01-04,In-N-Out Burger,withdrawal,15.80,Food
+10,2025-01-05,City Electric Utilities,withdrawal,142.20,Utilities
+11,2025-01-05,Amazon Purchase,withdrawal,34.99,Shopping
+12,2025-01-06,Philz Coffee,withdrawal,5.50,Coffee
+13,2025-01-06,Lunch Cafe,withdrawal,14.00,Food
+14,2025-01-07,Trader Joe's,withdrawal,65.15,Groceries
+15,2025-01-08,Uber Trip,withdrawal,18.50,Transport
+16,2025-01-08,Gym Supplements,withdrawal,40.00,Health
+17,2025-01-09,Parking Meter,withdrawal,4.50,Transport
+18,2025-01-10,Netflix,withdrawal,15.99,Subscription
+19,2025-01-10,Local Tap House,withdrawal,45.00,Food
+20,2025-01-11,Target,withdrawal,78.20,Shopping
+21,2025-01-11,CVS Pharmacy,withdrawal,22.40,Health
+22,2025-01-11,Dog Food,withdrawal,45.00,Shopping
+23,2025-01-12,IKEA,withdrawal,145.00,Shopping
+24,2025-01-13,Blue Bottle Coffee,withdrawal,7.00,Coffee
+25,2025-01-13,Cloud Storage,withdrawal,2.99,Subscription
+26,2025-01-14,Taco Truck,withdrawal,12.00,Food
+27,2025-01-15,Xfinity Internet,withdrawal,79.99,Utilities
+28,2025-01-15,Whole Foods,withdrawal,112.50,Groceries
+29,2025-01-16,Shell Gas,withdrawal,48.00,Transport
+30,2025-01-17,Paycheck Deposit,deposit,3000.00,Income
+31,2025-01-17,AMC Theatres,withdrawal,32.50,Entertainment
+32,2025-01-17,Sweetgreen,withdrawal,14.95,Food
+33,2025-01-18,Amazon Purchase,withdrawal,55.00,Shopping
+34,2025-01-19,HBO Max,withdrawal,14.99,Subscription
+35,2025-01-20,Verizon Wireless,withdrawal,92.50,Utilities
+36,2025-01-20,Peet's Coffee,withdrawal,6.25,Coffee
+37,2025-01-21,Uber Eats,withdrawal,28.40,Food
+38,2025-01-21,Barber Shop,withdrawal,35.00,Services
+39,2025-01-22,Dentist Co-Pay,withdrawal,50.00,Health
+40,2025-01-23,Safeway,withdrawal,55.90,Groceries
+41,2025-01-24,Steam Games,withdrawal,49.99,Entertainment
+42,2025-01-24,Yoga Class Drop-in,withdrawal,20.00,Health
+43,2025-01-25,State Farm Insurance,withdrawal,110.00,Insurance
+44,2025-01-25,Chevron Gas,withdrawal,46.20,Transport
+45,2025-01-26,Brunch Cafe,withdrawal,35.00,Food
+46,2025-01-27,Corner Store,withdrawal,15.50,Groceries
+47,2025-01-28,Starbucks #5542,withdrawal,5.95,Coffee
+48,2025-01-29,Bus Pass,withdrawal,60.00,Transport
+49,2025-01-30,Trader Joe's,withdrawal,82.40,Groceries
+50,2025-01-30,Magazine Subscription,withdrawal,12.00,Subscription
+51,2025-01-31,Paycheck Deposit,deposit,3000.00,Income
+52,2025-01-31,Lyft Ride,withdrawal,21.00,Transport
+53,2025-02-01,Rent Payment,withdrawal,1500.00,Housing
+54,2025-02-01,Spotify Premium,withdrawal,10.99,Subscription
+55,2025-02-01,Planet Fitness,withdrawal,24.99,Health
+56,2025-02-02,Amazon Purchase,withdrawal,22.99,Shopping
+57,2025-02-03,Dunkin' Donuts,withdrawal,4.50,Coffee
+58,2025-02-04,Whole Foods,withdrawal,95.60,Groceries
+59,2025-02-05,City Electric Utilities,withdrawal,135.50,Utilities
+60,2025-02-06,Shell Gas,withdrawal,44.00,Transport
+61,2025-02-06,Cold Medicine,withdrawal,18.00,Health
+62,2025-02-07,Local Thai Restaurant,withdrawal,52.00,Food
+63,2025-02-08,Target,withdrawal,105.30,Shopping
+64,2025-02-08,AMC Theatres,withdrawal,28.00,Entertainment
+65,2025-02-09,Flower Shop,withdrawal,45.00,Shopping
+66,2025-02-10,Netflix,withdrawal,15.99,Subscription
+67,2025-02-11,Philz Coffee,withdrawal,6.00,Coffee
+68,2025-02-12,Safeway,withdrawal,78.25,Groceries
+69,2025-02-12,Cat Litter,withdrawal,20.00,Shopping
+70,2025-02-13,Parking Garage,withdrawal,20.00,Transport
+71,2025-02-13,Cloud Storage,withdrawal,2.99,Subscription
+72,2025-02-14,Paycheck Deposit,deposit,3000.00,Income
+73,2025-02-14,Fancy Steakhouse,withdrawal,150.00,Food
+74,2025-02-14,Uber Trip,withdrawal,35.00,Transport
+75,2025-02-15,Xfinity Internet,withdrawal,79.99,Utilities
+76,2025-02-15,Valentine Chocolates,withdrawal,40.00,Shopping
+77,2025-02-16,Chevron Gas,withdrawal,47.50,Transport
+78,2025-02-17,Bookstore,withdrawal,32.40,Shopping
+79,2025-02-18,CVS Pharmacy,withdrawal,15.99,Health
+80,2025-02-19,Trader Joe's,withdrawal,68.90,Groceries
+81,2025-02-19,HBO Max,withdrawal,14.99,Subscription
+82,2025-02-20,Verizon Wireless,withdrawal,92.50,Utilities
+83,2025-02-21,DoorDash,withdrawal,42.50,Food
+84,2025-02-21,Vitamins,withdrawal,35.00,Health
+85,2025-02-22,Best Buy,withdrawal,199.99,Shopping
+86,2025-02-23,Starbucks #5542,withdrawal,7.15,Coffee
+87,2025-02-24,Dry Cleaners,withdrawal,35.00,Services
+88,2025-02-25,State Farm Insurance,withdrawal,110.00,Insurance
+89,2025-02-25,Tacos,withdrawal,12.50,Food
+90,2025-02-26,Whole Foods,withdrawal,88.40,Groceries
+91,2025-02-27,Lyft Ride,withdrawal,19.50,Transport
+92,2025-02-28,Paycheck Deposit,deposit,3000.00,Income
+93,2025-02-28,Local Pub,withdrawal,38.00,Food
+94,2025-03-01,Rent Payment,withdrawal,1500.00,Housing
+95,2025-03-01,Spotify Premium,withdrawal,10.99,Subscription
+96,2025-03-01,Planet Fitness,withdrawal,24.99,Health
+97,2025-03-02,Peet's Coffee,withdrawal,6.50,Coffee
+98,2025-03-03,Safeway,withdrawal,110.00,Groceries
+99,2025-03-04,Hardware Store,withdrawal,28.75,Shopping
+100,2025-03-05,City Electric Utilities,withdrawal,120.00,Utilities
+101,2025-03-06,Shell Gas,withdrawal,49.00,Transport
+102,2025-03-07,Chipotle,withdrawal,13.25,Food
+103,2025-03-07,New Running Shoes,withdrawal,110.00,Shopping
+104,2025-03-08,Amazon Purchase,withdrawal,45.99,Shopping
+105,2025-03-08,Women's Day Donation,withdrawal,50.00,Services
+106,2025-03-09,Uber Eats,withdrawal,31.00,Food
+107,2025-03-10,Netflix,withdrawal,15.99,Subscription
+108,2025-03-11,Blue Bottle Coffee,withdrawal,6.75,Coffee
+109,2025-03-12,Trader Joe's,withdrawal,75.50,Groceries
+110,2025-03-13,Post Office,withdrawal,18.90,Services
+111,2025-03-13,Cloud Storage,withdrawal,2.99,Subscription
+112,2025-03-14,Paycheck Deposit,deposit,3000.00,Income
+113,2025-03-14,Cinema 16,withdrawal,26.00,Entertainment
+114,2025-03-15,Xfinity Internet,withdrawal,79.99,Utilities
+115,2025-03-15,Chevron Gas,withdrawal,51.20,Transport
+116,2025-03-15,Vet Checkup,withdrawal,85.00,Services
+117,2025-03-16,Bakery,withdrawal,22.50,Food
+118,2025-03-17,Whole Foods,withdrawal,92.80,Groceries
+119,2025-03-18,Walgreens,withdrawal,28.50,Health
+120,2025-03-19,HBO Max,withdrawal,14.99,Subscription
+121,2025-03-20,Verizon Wireless,withdrawal,92.50,Utilities
+122,2025-03-21,Sushi House,withdrawal,65.00,Food
+123,2025-03-22,Target,withdrawal,85.00,Shopping
+124,2025-03-22,Spring Cleaning Supplies,withdrawal,30.00,Groceries
+125,2025-03-23,Starbucks #9901,withdrawal,5.45,Coffee
+126,2025-03-24,Lyft Ride,withdrawal,24.00,Transport
+127,2025-03-25,State Farm Insurance,withdrawal,110.00,Insurance
+128,2025-03-25,Therapy Session,withdrawal,150.00,Health
+129,2025-03-26,Safeway,withdrawal,68.40,Groceries
+130,2025-03-27,Car Wash,withdrawal,15.00,Transport
+131,2025-03-28,Paycheck Deposit,deposit,3000.00,Income
+132,2025-03-28,Local Brewery,withdrawal,42.00,Food
+133,2025-03-29,H&M,withdrawal,75.00,Shopping
+134,2025-03-30,Farmers Market,withdrawal,45.00,Groceries
+135,2025-03-31,Shell Gas,withdrawal,48.80,Transport
+136,2025-04-01,Rent Payment,withdrawal,1500.00,Housing
+137,2025-04-01,Spotify Premium,withdrawal,10.99,Subscription
+138,2025-04-01,Planet Fitness,withdrawal,24.99,Health
+139,2025-04-02,Philz Coffee,withdrawal,5.75,Coffee
+140,2025-04-03,Pharmacy,withdrawal,10.50,Health
+141,2025-04-04,Trader Joe's,withdrawal,85.90,Groceries
+142,2025-04-05,City Electric Utilities,withdrawal,105.40,Utilities
+143,2025-04-05,Amazon Purchase,withdrawal,28.99,Shopping
+144,2025-04-06,Garden Center,withdrawal,65.00,Shopping
+145,2025-04-07,Chevron Gas,withdrawal,50.50,Transport
+146,2025-04-08,Sweetgreen,withdrawal,15.50,Food
+147,2025-04-09,Parking Meter,withdrawal,3.75,Transport
+148,2025-04-10,Netflix,withdrawal,15.99,Subscription
+149,2025-04-10,Allergy Medicine,withdrawal,22.00,Health
+150,2025-04-11,Paycheck Deposit,deposit,3000.00,Income
+151,2025-04-11,Whole Foods,withdrawal,105.00,Groceries
+152,2025-04-12,Ticketmaster,withdrawal,120.00,Entertainment
+153,2025-04-12,Uber Trip,withdrawal,45.00,Transport
+154,2025-04-13,Ice Cream Shop,withdrawal,9.50,Food
+155,2025-04-13,Cloud Storage,withdrawal,2.99,Subscription
+156,2025-04-14,Starbucks #5542,withdrawal,6.25,Coffee
+157,2025-04-15,Xfinity Internet,withdrawal,79.99,Utilities
+158,2025-04-15,TurboTax,withdrawal,89.99,Services
+159,2025-04-16,Office Supplies,withdrawal,42.30,Shopping
+160,2025-04-17,Safeway,withdrawal,72.60,Groceries
+161,2025-04-17,Tax Prep Fees,withdrawal,120.00,Services
+162,2025-04-18,Pizza My Heart,withdrawal,32.00,Food
+163,2025-04-18,Pet Toys,withdrawal,30.00,Shopping
+164,2025-04-19,Home Depot,withdrawal,65.75,Shopping
+165,2025-04-19,HBO Max,withdrawal,14.99,Subscription
+166,2025-04-20,Verizon Wireless,withdrawal,92.50,Utilities
+167,2025-04-21,Peet's Coffee,withdrawal,6.95,Coffee
+168,2025-04-22,Shell Gas,withdrawal,52.00,Transport
+169,2025-04-22,Earth Day Donation,withdrawal,25.00,Services
+170,2025-04-23,Tailor,withdrawal,25.00,Services
+171,2025-04-24,Trader Joe's,withdrawal,66.40,Groceries
+172,2025-04-25,Paycheck Deposit,deposit,3000.00,Income
+173,2025-04-25,State Farm Insurance,withdrawal,110.00,Insurance
+174,2025-04-25,Local Tap House,withdrawal,55.00,Food
+175,2025-04-26,Shoe Repair,withdrawal,18.00,Services
+176,2025-04-27,CVS Pharmacy,withdrawal,18.25,Health
+177,2025-04-28,Uber Eats,withdrawal,29.50,Food
+178,2025-04-28,Massage,withdrawal,85.00,Health
+179,2025-04-30,Amazon Purchase,withdrawal,42.00,Shopping
+180,2025-05-01,Rent Payment,withdrawal,1500.00,Housing
+181,2025-05-01,Spotify Premium,withdrawal,10.99,Subscription
+182,2025-05-01,Planet Fitness,withdrawal,24.99,Health
+183,2025-05-02,Dunkin' Donuts,withdrawal,5.25,Coffee
+184,2025-05-03,Whole Foods,withdrawal,98.40,Groceries
+185,2025-05-04,Sporting Goods,withdrawal,85.00,Shopping
+186,2025-05-05,City Electric Utilities,withdrawal,115.00,Utilities
+187,2025-05-05,Cinco De Mayo Drinks,withdrawal,45.00,Food
+188,2025-05-06,Chevron Gas,withdrawal,53.50,Transport
+189,2025-05-07,In-N-Out Burger,withdrawal,16.50,Food
+190,2025-05-08,Parking Garage,withdrawal,22.00,Transport
+191,2025-05-09,Paycheck Deposit,deposit,3000.00,Income
+192,2025-05-09,Safeway,withdrawal,85.00,Groceries
+193,2025-05-10,Netflix,withdrawal,15.99,Subscription
+194,2025-05-10,Target,withdrawal,112.20,Shopping
+195,2025-05-11,Mother's Day Gift,withdrawal,75.00,Shopping
+196,2025-05-12,Starbucks #9901,withdrawal,6.85,Coffee
+197,2025-05-12,Sunscreen,withdrawal,15.00,Health
+198,2025-05-13,Smoothie Shop,withdrawal,8.50,Food
+199,2025-05-13,Cloud Storage,withdrawal,2.99,Subscription
+200,2025-05-14,Lyft Ride,withdrawal,22.50,Transport
+201,2025-05-15,Xfinity Internet,withdrawal,79.99,Utilities
+202,2025-05-15,Trader Joe's,withdrawal,78.30,Groceries
+203,2025-05-17,Local Thai Restaurant,withdrawal,68.00,Food
+204,2025-05-18,AMC Theatres,withdrawal,35.00,Entertainment
+205,2025-05-19,HBO Max,withdrawal,14.99,Subscription
+206,2025-05-20,Verizon Wireless,withdrawal,92.50,Utilities
+207,2025-05-20,Dog Grooming,withdrawal,65.00,Services
+208,2025-05-21,Shell Gas,withdrawal,51.80,Transport
+209,2025-05-22,Blue Bottle Coffee,withdrawal,7.25,Coffee
+210,2025-05-23,Paycheck Deposit,deposit,3000.00,Income
+211,2025-05-23,Whole Foods,withdrawal,102.50,Groceries
+212,2025-05-23,Dental Cleaning,withdrawal,120.00,Health
+213,2025-05-24,Pet Store,withdrawal,55.40,Shopping
+214,2025-05-25,State Farm Insurance,withdrawal,110.00,Insurance
+215,2025-05-25,Amazon Purchase,withdrawal,88.99,Shopping
+216,2025-05-26,DoorDash,withdrawal,45.60,Food
+217,2025-05-26,Memorial Day BBQ,withdrawal,75.00,Groceries
+218,2025-05-27,Hair Salon,withdrawal,65.00,Services
+219,2025-05-28,Walgreens,withdrawal,12.99,Health
+220,2025-05-29,Convenience Store,withdrawal,12.30,Groceries
+221,2025-05-30,Safeway,withdrawal,64.20,Groceries
+222,2025-05-31,Uber Trip,withdrawal,26.00,Transport
+223,2025-06-01,Rent Payment,withdrawal,1500.00,Housing
+224,2025-06-01,Spotify Premium,withdrawal,10.99,Subscription
+225,2025-06-01,Planet Fitness,withdrawal,24.99,Health
+226,2025-06-02,Philz Coffee,withdrawal,6.00,Coffee
+227,2025-06-03,Airport Parking,withdrawal,45.00,Transport
+228,2025-06-04,Trader Joe's,withdrawal,92.10,Groceries
+229,2025-06-05,City Electric Utilities,withdrawal,145.00,Utilities
+230,2025-06-05,Online Course,withdrawal,199.00,Education
+231,2025-06-06,Paycheck Deposit,deposit,3000.00,Income
+232,2025-06-06,Chevron Gas,withdrawal,55.00,Transport
+233,2025-06-07,Local Pub,withdrawal,52.50,Food
+234,2025-06-08,Amazon Purchase,withdrawal,36.75,Shopping
+235,2025-06-08,First Aid Kit,withdrawal,30.00,Health
+236,2025-06-09,Souvenir Shop,withdrawal,35.00,Shopping
+237,2025-06-10,Netflix,withdrawal,15.99,Subscription
+238,2025-06-11,Whole Foods,withdrawal,115.40,Groceries
+239,2025-06-12,Beach Parking,withdrawal,15.00,Transport
+240,2025-06-13,Starbucks #5542,withdrawal,5.95,Coffee
+241,2025-06-13,Cloud Storage,withdrawal,2.99,Subscription
+242,2025-06-14,Museum Admission,withdrawal,40.00,Entertainment
+243,2025-06-15,Xfinity Internet,withdrawal,79.99,Utilities
+244,2025-06-15,Sweetgreen,withdrawal,16.25,Food
+245,2025-06-15,Father's Day Gift,withdrawal,60.00,Shopping
+246,2025-06-16,Seafood Shack,withdrawal,48.00,Food
+247,2025-06-17,Shell Gas,withdrawal,54.20,Transport
+248,2025-06-18,Safeway,withdrawal,82.00,Groceries
+249,2025-06-19,HBO Max,withdrawal,14.99,Subscription
+250,2025-06-20,Paycheck Deposit,deposit,3000.00,Income
+251,2025-06-20,Verizon Wireless,withdrawal,92.50,Utilities
+252,2025-06-20,Target,withdrawal,65.80,Shopping
+253,2025-06-21,Uber Eats,withdrawal,38.90,Food
+254,2025-06-21,Summer Solstice Party,withdrawal,50.00,Entertainment
+255,2025-06-22,Summer Festival,withdrawal,30.00,Entertainment
+256,2025-06-23,Peet's Coffee,withdrawal,6.65,Coffee
+257,2025-06-23,Pet Sitter,withdrawal,100.00,Services
+258,2025-06-24,Ice Cream Shop,withdrawal,10.25,Food
+259,2025-06-25,State Farm Insurance,withdrawal,110.00,Insurance
+260,2025-06-25,Trader Joe's,withdrawal,70.50,Groceries
+261,2025-06-27,Lyft Ride,withdrawal,20.00,Transport
+262,2025-06-27,Gym Equipment,withdrawal,65.00,Shopping
+263,2025-06-28,Sushi House,withdrawal,85.00,Food
+264,2025-06-29,Camping Gear,withdrawal,120.00,Shopping
+265,2025-06-30,CVS Pharmacy,withdrawal,25.40,Health
+266,2025-07-01,Rent Payment,withdrawal,1500.00,Housing
+267,2025-07-01,Spotify Premium,withdrawal,10.99,Subscription
+268,2025-07-01,Planet Fitness,withdrawal,24.99,Health
+269,2025-07-02,Fireworks Stand,withdrawal,50.00,Entertainment
+270,2025-07-03,Whole Foods,withdrawal,130.50,Groceries
+271,2025-07-03,BevMo!,withdrawal,85.00,Shopping
+272,2025-07-04,Paycheck Deposit,deposit,3000.00,Income
+273,2025-07-04,Chevron Gas,withdrawal,60.00,Transport
+274,2025-07-04,July 4th Supplies,withdrawal,65.00,Groceries
+275,2025-07-05,City Electric Utilities,withdrawal,185.00,Utilities
+276,2025-07-06,Starbucks Mobile,withdrawal,7.50,Coffee
+277,2025-07-07,Uber Trip,withdrawal,32.00,Transport
+278,2025-07-08,Car Maintenance,withdrawal,85.00,Transport
+279,2025-07-09,Safeway,withdrawal,95.20,Groceries
+280,2025-07-10,Netflix,withdrawal,15.99,Subscription
+281,2025-07-11,Local Brewery,withdrawal,62.00,Food
+282,2025-07-12,Amazon Purchase,withdrawal,115.99,Shopping
+283,2025-07-13,Farmers Market,withdrawal,52.00,Groceries
+284,2025-07-13,Cloud Storage,withdrawal,2.99,Subscription
+285,2025-07-14,Dunkin' Donuts,withdrawal,5.50,Coffee
+286,2025-07-14,Hydration Packs,withdrawal,25.00,Health
+287,2025-07-15,Xfinity Internet,withdrawal,79.99,Utilities
+288,2025-07-15,Trader Joe's,withdrawal,88.40,Groceries
+289,2025-07-15,Gaming Console,withdrawal,499.00,Shopping
+290,2025-07-16,Burger Joint,withdrawal,14.50,Food
+291,2025-07-17,Shell Gas,withdrawal,56.50,Transport
+292,2025-07-18,Paycheck Deposit,deposit,3000.00,Income
+293,2025-07-18,Chipotle,withdrawal,14.50,Food
+294,2025-07-19,HBO Max,withdrawal,14.99,Subscription
+295,2025-07-20,Verizon Wireless,withdrawal,92.50,Utilities
+296,2025-07-20,Steam Games,withdrawal,29.99,Entertainment
+297,2025-07-21,Swimwear Store,withdrawal,45.00,Shopping
+298,2025-07-22,Whole Foods,withdrawal,108.00,Groceries
+299,2025-07-22,Flea Medicine,withdrawal,40.00,Health
+300,2025-07-23,Philz Coffee,withdrawal,6.25,Coffee
+301,2025-07-24,Lyft Ride,withdrawal,25.50,Transport
+302,2025-07-25,State Farm Insurance,withdrawal,110.00,Insurance
+303,2025-07-25,Ice Cream Truck,withdrawal,5.00,Food
+304,2025-07-26,Fancy Steakhouse,withdrawal,175.00,Food
+305,2025-07-27,Target,withdrawal,52.30,Shopping
+306,2025-07-28,Parking Meter,withdrawal,5.00,Transport
+307,2025-07-29,Safeway,withdrawal,60.50,Groceries
+308,2025-07-29,Eye Exam,withdrawal,95.00,Health
+309,2025-07-31,Blue Bottle Coffee,withdrawal,7.00,Coffee
+310,2025-08-01,Paycheck Deposit,deposit,3000.00,Income
+311,2025-08-01,Rent Payment,withdrawal,1500.00,Housing
+312,2025-08-01,Spotify Premium,withdrawal,10.99,Subscription
+313,2025-08-01,Planet Fitness,withdrawal,24.99,Health
+314,2025-08-02,Trader Joe's,withdrawal,94.60,Groceries
+315,2025-08-03,Home Decor,withdrawal,75.00,Shopping
+316,2025-08-04,Chevron Gas,withdrawal,55.80,Transport
+317,2025-08-05,City Electric Utilities,withdrawal,190.50,Utilities
+318,2025-08-06,Uber Eats,withdrawal,34.20,Food
+319,2025-08-07,Doctor Visit,withdrawal,40.00,Health
+320,2025-08-08,Amazon Purchase,withdrawal,49.50,Shopping
+321,2025-08-09,Whole Foods,withdrawal,118.20,Groceries
+322,2025-08-09,Prescription Refill,withdrawal,30.00,Health
+323,2025-08-10,Netflix,withdrawal,15.99,Subscription
+324,2025-08-11,Starbucks #5542,withdrawal,6.15,Coffee
+325,2025-08-12,Bakery,withdrawal,18.75,Food
+326,2025-08-13,Shell Gas,withdrawal,53.00,Transport
+327,2025-08-13,Cloud Storage,withdrawal,2.99,Subscription
+328,2025-08-14,Local Thai Restaurant,withdrawal,58.00,Food
+329,2025-08-15,Paycheck Deposit,deposit,3000.00,Income
+330,2025-08-15,Xfinity Internet,withdrawal,79.99,Utilities
+331,2025-08-15,Safeway,withdrawal,76.40,Groceries
+332,2025-08-15,Back to School Supplies,withdrawal,85.00,Shopping
+333,2025-08-16,Concert Tickets,withdrawal,150.00,Entertainment
+334,2025-08-17,Car Wash,withdrawal,16.00,Transport
+335,2025-08-18,Peet's Coffee,withdrawal,6.80,Coffee
+336,2025-08-18,Dog Treats,withdrawal,15.00,Shopping
+337,2025-08-19,Walgreens,withdrawal,19.50,Health
+338,2025-08-19,HBO Max,withdrawal,14.99,Subscription
+339,2025-08-20,Verizon Wireless,withdrawal,92.50,Utilities
+340,2025-08-20,Textbooks,withdrawal,150.00,Education
+341,2025-08-21,Trader Joe's,withdrawal,82.00,Groceries
+342,2025-08-22,Lyft Ride,withdrawal,22.00,Transport
+343,2025-08-23,Target,withdrawal,95.70,Shopping
+344,2025-08-23,Pizza My Heart,withdrawal,35.50,Food
+345,2025-08-24,Electronics Store,withdrawal,65.00,Shopping
+346,2025-08-25,State Farm Insurance,withdrawal,110.00,Insurance
+347,2025-08-26,Philz Coffee,withdrawal,5.85,Coffee
+348,2025-08-26,Therapy Session,withdrawal,150.00,Health
+349,2025-08-27,Whole Foods,withdrawal,90.50,Groceries
+350,2025-08-28,Stationery Shop,withdrawal,22.00,Shopping
+351,2025-08-29,Paycheck Deposit,deposit,3000.00,Income
+352,2025-08-29,Chevron Gas,withdrawal,54.00,Transport
+353,2025-08-30,Local Tap House,withdrawal,48.00,Food
+354,2025-08-30,End of Summer Trip,withdrawal,300.00,Travel
+355,2025-08-31,Food Truck Festival,withdrawal,35.00,Food
+356,2025-09-01,Rent Payment,withdrawal,1500.00,Housing
+357,2025-09-01,Spotify Premium,withdrawal,10.99,Subscription
+358,2025-09-01,Planet Fitness,withdrawal,24.99,Health
+359,2025-09-02,Amazon Purchase,withdrawal,62.00,Shopping
+360,2025-09-03,Safeway,withdrawal,105.00,Groceries
+361,2025-09-04,Starbucks #9901,withdrawal,5.65,Coffee
+362,2025-09-05,City Electric Utilities,withdrawal,165.00,Utilities
+363,2025-09-06,Uber Trip,withdrawal,28.50,Transport
+364,2025-09-07,In-N-Out Burger,withdrawal,17.20,Food
+365,2025-09-07,Labor Day BBQ,withdrawal,85.00,Groceries
+366,2025-09-08,Parking Garage,withdrawal,18.00,Transport
+367,2025-09-09,Trader Joe's,withdrawal,74.80,Groceries
+368,2025-09-10,Netflix,withdrawal,15.99,Subscription
+369,2025-09-11,Shell Gas,withdrawal,51.50,Transport
+370,2025-09-12,Paycheck Deposit,deposit,3000.00,Income
+371,2025-09-12,Cinema 16,withdrawal,38.00,Entertainment
+372,2025-09-12,Flu Shot,withdrawal,0.00,Health
+373,2025-09-13,Whole Foods,withdrawal,122.00,Groceries
+374,2025-09-13,Sweetgreen,withdrawal,15.90,Food
+375,2025-09-13,Cloud Storage,withdrawal,2.99,Subscription
+376,2025-09-14,Bookstore,withdrawal,28.50,Shopping
+377,2025-09-15,Xfinity Internet,withdrawal,79.99,Utilities
+378,2025-09-16,Blue Bottle Coffee,withdrawal,7.50,Coffee
+379,2025-09-17,Pizza Slice,withdrawal,6.50,Food
+380,2025-09-18,Target,withdrawal,55.60,Shopping
+381,2025-09-19,Lyft Ride,withdrawal,23.00,Transport
+382,2025-09-19,HBO Max,withdrawal,14.99,Subscription
+383,2025-09-20,Verizon Wireless,withdrawal,92.50,Utilities
+384,2025-09-20,Safeway,withdrawal,68.90,Groceries
+385,2025-09-20,Vet Vaccination,withdrawal,75.00,Services
+386,2025-09-21,DoorDash,withdrawal,40.00,Food
+387,2025-09-22,Shoe Store,withdrawal,95.00,Shopping
+388,2025-09-22,Autumn Decor,withdrawal,45.00,Shopping
+389,2025-09-23,CVS Pharmacy,withdrawal,14.50,Health
+390,2025-09-24,Chevron Gas,withdrawal,52.80,Transport
+391,2025-09-25,State Farm Insurance,withdrawal,110.00,Insurance
+392,2025-09-26,Paycheck Deposit,deposit,3000.00,Income
+393,2025-09-26,Trader Joe's,withdrawal,88.50,Groceries
+394,2025-09-26,New Glasses,withdrawal,250.00,Health
+395,2025-09-27,Sushi House,withdrawal,75.00,Food
+396,2025-09-28,Farmers Market,withdrawal,38.00,Groceries
+397,2025-09-29,Peet's Coffee,withdrawal,6.45,Coffee
+398,2025-10-01,Rent Payment,withdrawal,1500.00,Housing
+399,2025-10-01,Spotify Premium,withdrawal,10.99,Subscription
+400,2025-10-01,Planet Fitness,withdrawal,24.99,Health
+401,2025-10-02,Whole Foods,withdrawal,98.70,Groceries
+402,2025-10-03,Amazon Purchase,withdrawal,34.50,Shopping
+403,2025-10-04,Halloween Costume,withdrawal,65.00,Shopping
+404,2025-10-05,City Electric Utilities,withdrawal,130.00,Utilities
+405,2025-10-05,Shell Gas,withdrawal,50.00,Transport
+406,2025-10-06,Starbucks Mobile,withdrawal,6.95,Coffee
+407,2025-10-07,Pumpkin Patch,withdrawal,45.00,Entertainment
+408,2025-10-08,Safeway,withdrawal,112.40,Groceries
+409,2025-10-09,Chipotle,withdrawal,13.90,Food
+410,2025-10-09,Gym Clothes,withdrawal,55.00,Shopping
+411,2025-10-10,Paycheck Deposit,deposit,3000.00,Income
+412,2025-10-10,Netflix,withdrawal,15.99,Subscription
+413,2025-10-11,Uber Eats,withdrawal,36.50,Food
+414,2025-10-12,Target,withdrawal,89.20,Shopping
+415,2025-10-13,Pharmacy,withdrawal,15.40,Health
+416,2025-10-13,Cloud Storage,withdrawal,2.99,Subscription
+417,2025-10-14,Trader Joe's,withdrawal,72.60,Groceries
+418,2025-10-15,Xfinity Internet,withdrawal,79.99,Utilities
+419,2025-10-16,Dunkin' Donuts,withdrawal,5.00,Coffee
+420,2025-10-17,Lyft Ride,withdrawal,26.00,Transport
+421,2025-10-18,Local Pub,withdrawal,58.00,Food
+422,2025-10-18,AMC Theatres,withdrawal,30.00,Entertainment
+423,2025-10-19,HBO Max,withdrawal,14.99,Subscription
+424,2025-10-20,Verizon Wireless,withdrawal,92.50,Utilities
+425,2025-10-21,Whole Foods,withdrawal,105.80,Groceries
+426,2025-10-22,Chevron Gas,withdrawal,53.20,Transport
+427,2025-10-22,Pet Halloween Costume,withdrawal,25.00,Shopping
+428,2025-10-23,Candy Store,withdrawal,25.00,Groceries
+429,2025-10-24,Paycheck Deposit,deposit,3000.00,Income
+430,2025-10-24,Philz Coffee,withdrawal,6.15,Coffee
+431,2025-10-24,Vitamins,withdrawal,35.00,Health
+432,2025-10-25,State Farm Insurance,withdrawal,110.00,Insurance
+433,2025-10-25,Amazon Purchase,withdrawal,75.00,Shopping
+434,2025-10-26,Local Thai Restaurant,withdrawal,64.00,Food
+435,2025-10-27,Parking Meter,withdrawal,4.25,Transport
+436,2025-10-28,Safeway,withdrawal,70.00,Groceries
+437,2025-10-29,Haunted House,withdrawal,35.00,Entertainment
+438,2025-10-30,Walgreens,withdrawal,21.80,Health
+439,2025-10-31,Uber Trip,withdrawal,40.00,Transport
+440,2025-10-31,Halloween Candy,withdrawal,30.00,Groceries
+441,2025-11-01,Rent Payment,withdrawal,1500.00,Housing
+442,2025-11-01,Spotify Premium,withdrawal,10.99,Subscription
+443,2025-11-01,Planet Fitness,withdrawal,24.99,Health
+444,2025-11-02,Peet's Coffee,withdrawal,7.00,Coffee
+445,2025-11-03,Trader Joe's,withdrawal,94.50,Groceries
+446,2025-11-04,Voting Day Coffee,withdrawal,5.00,Coffee
+447,2025-11-05,City Electric Utilities,withdrawal,145.00,Utilities
+448,2025-11-06,Shell Gas,withdrawal,54.50,Transport
+449,2025-11-07,Paycheck Deposit,deposit,3000.00,Income
+450,2025-11-07,Sweetgreen,withdrawal,16.50,Food
+451,2025-11-07,Therapy Session,withdrawal,150.00,Health
+452,2025-11-08,Best Buy,withdrawal,350.00,Shopping
+453,2025-11-09,Whole Foods,withdrawal,120.00,Groceries
+454,2025-10-20,Corner Bistro,withdrawal,27.45,Food
+455,2025-10-20,Outdoor Outfitters,withdrawal,129.99,Shopping
+456,2025-10-21,Harborview Parking,withdrawal,18.0,Transport
+457,2025-10-22,ZypherX Intl Payment,withdrawal,3500.0,Shopping
+458,2025-10-22,Artisan Bakery,withdrawal,12.75,Food
+459,2025-10-23,State Fair Tickets,withdrawal,48.0,Entertainment
+460,2025-10-23,Eastside Diner,withdrawal,22.3,Food
+461,2025-10-24,Metro Laundromat,withdrawal,14.0,Services
+462,2025-10-25,GoldenGate Crypto Exchange,withdrawal,2800.0,Shopping
+463,2025-10-25,Valley Hardware,withdrawal,39.6,Shopping
+464,2025-10-26,Skyline Hotel - out of state,withdrawal,420.0,Travel
+465,2025-10-26,Pepper's Pizza,withdrawal,19.95,Food
+466,2025-10-27,Suburban Auto Parts,withdrawal,74.2,Transport
+467,2025-10-27,Green Grocer,withdrawal,43.5,Groceries
+468,2025-10-28,Sunny Day Spa,withdrawal,95.0,Services
+469,2025-10-28,Main Street Books,withdrawal,26.5,Shopping
+470,2025-10-29,Oceanic Refunds,withdrawal,1250.0,Shopping
+471,2025-10-29,Corner Store,withdrawal,8.25,Groceries
+472,2025-10-30,All Seasons Hardware,withdrawal,58.75,Shopping
+473,2025-10-30,Broadway Cinema,withdrawal,14.0,Entertainment
+474,2025-10-31,Harvest Farmers Market,withdrawal,34.0,Groceries
+475,2025-10-31,Express Car Wash,withdrawal,16.0,Transport
+476,2025-11-01,Campus Cafe,withdrawal,9.5,Food
+477,2025-11-01,SmallTown Insurance,withdrawal,95.0,Insurance
+478,2025-11-02,Novelty Gifts,withdrawal,22.99,Shopping
+479,2025-11-02,BlueWave Tour - out of state,withdrawal,650.0,Travel
+481,2025-11-03,Mercantile Pharmacy,withdrawal,24.4,Health
+482,2025-11-04,Neighborhood Deli,withdrawal,13.75,Food
+483,2025-11-04,City Bike Rental,withdrawal,30.0,Transport
+484,2025-11-05,Harvest Clinic,withdrawal,60.0,Health
+485,2025-11-05,Seaside Boutique,withdrawal,89.9,Shopping
+486,2025-11-06,Interstate Furnishings - out of state,withdrawal,1200.0,Shopping
+487,2025-11-06,QuickCash Wire - FL,withdrawal,2200.0,Shopping
+488,2025-11-06,Coffee Stand,withdrawal,4.75,Coffee
+490,2025-11-07,Neighborhood Florist,withdrawal,55.0,Shopping
+491,2025-11-07,Pet Supplies Plus,withdrawal,38.9,Shopping
+492,2025-11-08,Highland Gym,withdrawal,45.0,Health
+493,2025-11-08,BlueLine Taxi,withdrawal,27.0,Transport
+494,2025-11-08,Starlight Electronics,withdrawal,299.99,Shopping
+495,2025-11-08,SmallTown Charity,withdrawal,20.0,Services
+496,2025-11-09,Westside Grocers,withdrawal,67.4,Groceries
+497,2025-11-09,Peak Performance,withdrawal,129.0,Health
+498,2025-11-09,Airport Express Parking - out of state,withdrawal,72.0,Transport
+500,2025-11-09,TinyTop Toys,withdrawal,25.0,Shopping
+501,2025-11-09,Mainline Utilities,withdrawal,88.6,Utilities
+502,2025-11-09,Corner Bistro,withdrawal,31.2,Food
+503,2025-11-09,Express Mail Center,withdrawal,12.5,Services
