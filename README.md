@@ -112,7 +112,7 @@ Interprets the deterministic data provided by the financial intelligence engine 
 2. The Forensic Accountant: Specialized prompt optimized for high-recall detection of subscriptions and “gray charges”.
 3. The Visualizer: Converts natural language requests (e.g. “Show me my food spending trend as a line graph”) into strict JSON configurations for frontend charting libraries.
 
-   ### **4.3 Conversational Interface (/api/chat)**
+### **4.3 Conversational Interface (/api/chat)**
 
 4. Uses a two-stage approach for better accuracy:
    1. **Regex pre-processing** (extract_goal_from_message): Deterministically extracts concrete data like dollar amounts and target dates (e.g., “save $3000 by May”) using regular expressions and dateparser.  
