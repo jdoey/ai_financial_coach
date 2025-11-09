@@ -121,7 +121,7 @@ Interprets the deterministic data provided by the financial intelligence engine 
 6. **Intent Recognition**: Uses regex to pre-extract concrete goals (amounts and dates) from user messages before passing them to the LLM for feasibility analysis.
 7. **Performance Optimization**: Limits context window to the last 5 messages to balance coherence with token usage and latency.
 
-   ### **4.4 Dynamic Visualization**
+### **4.4 Dynamic Visualization**
 
 8. **Text-to-Chart:** A specialized Gemini system prompt converts user requests (e.g., “show my coffee spending”) into a strict JSON format compatible with the frontend’s Recharts library.
 9. **Frontend Rendering**: The React app dynamically selects the chart component (Pie, Bar, Line) based on the AI-generated configuration.
@@ -164,3 +164,12 @@ Interprets the deterministic data provided by the financial intelligence engine 
    1. Risks: If Optimus fails to flag a genuinely fraudulent transaction because it looked mathematically similar to a normal one, the user might not check their statement themselves, believing that Optimus has it handled.
 3. Algorithmic Bias in Anomaly Detection
    1. Risks: if a user consistently makes poor financial decisions, the model will learn this as “normal” and stop flagging it.
+  
+## **10\. Key Learnings**
+
+1. Relying solely on LLms for financial math is risky. Combining deterministic ML with Generative AI provides a much more reliable and trustworthy user experience than using either in isolation.
+2. Structured outputs are essential for GenAI. Forcing Gemini to return strict JSON for visualizations and subscription detection was critical for integration with the frontend
+3. Limiting context window was a necessary trade-off between maintaining conversation coherence and managing latency/token costs.
+4. Rate limits get blow through very quick when working with LLMs. Important to use mock data to avoid wasting tokens in unnecessary LLM calls.
+5. Prioritization as a one-man team. Cutting corners intelligently.
+6. Shipping a working end-to-end pipeline that demonstrates the concept is more important than fine-tuning a model for 1% better accuracy in a hackathon setting.
