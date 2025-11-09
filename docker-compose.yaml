@@ -1,0 +1,20 @@
+services:
+  # The Flask Backend Service
+  backend:
+    build:
+      context: ./backend 
+    container_name: ai_financial_coach_backend
+    ports:
+      - "5000:5000"
+    env_file:
+      - .env # Load environment variables
+
+  # The React/Vite Frontend Service (Served by NGINX)
+  frontend:
+    build:
+      context: ./frontend 
+    container_name: ai_financial_coach_frontend
+    ports:
+      - "3000:80" # Map host port 3000 to container port 80
+    depends_on:
+      - backend
