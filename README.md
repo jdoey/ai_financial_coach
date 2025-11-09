@@ -1,12 +1,14 @@
 # **Optifi \- AI Financial Coach** **Design Documentation**
 
+DEMO: https://www.youtube.com/watch?v=PjrtHv9MCA8
+
 ## **Problem Statement:**
 
 Many people struggle with personal finance due to a lack of visibility and personalized, actionable advice. Manually tracking every expense is tedious, and generic budgeting apps often fail to inspire lasting behavioral change. As a result, people are often unaware of wasteful spending habits, miss opportunities to save, and feel anxious about their financial future.
 
 ## **1\. Design Overview**
 
-Optifi is an AI-powered financial intelligence platform designed to provide personalized, actionable insights to young adults and gig workers. The system ingests raw transaction data and uses a hybrid approach of deterministic rules and Generative AI to offer behavioral nudges, subscription detection, goal forecasting, and on-demand data visualization. Users can interact with an AI Financial Coach via text chat and get insights to their spending, budgeting, and saving goals and use natural language to generate data visualizations of their finances.
+Optifi is an AI-powered financial intelligence platform designed to provide personalized, actionable insights to young adults, gig workers, and anyone who wants to get a grip of their finances. The system ingests raw transaction data and uses a hybrid approach of deterministic rules and Generative AI to offer financial insights, anomaly detection, subscription detection, goal forecasting, and on-demand data visualization. Users can interact with an AI Financial Coach via text chat and get insights to their spending, budgeting, and saving goals and use natural language to generate data visualizations of their finances.
 
 ### **1.1 Architecture Diagram**
 
@@ -112,7 +114,7 @@ Interprets the deterministic data provided by the financial intelligence engine 
 2. The Forensic Accountant: Specialized prompt optimized for high-recall detection of subscriptions and “gray charges”.
 3. The Visualizer: Converts natural language requests (e.g. “Show me my food spending trend as a line graph”) into strict JSON configurations for frontend charting libraries.
 
-   ### **4.3 Conversational Interface (/api/chat)**
+### **4.3 Conversational Interface (/api/chat)**
 
 4. Uses a two-stage approach for better accuracy:
    1. **Regex pre-processing** (extract_goal_from_message): Deterministically extracts concrete data like dollar amounts and target dates (e.g., “save $3000 by May”) using regular expressions and dateparser.  
@@ -121,7 +123,7 @@ Interprets the deterministic data provided by the financial intelligence engine 
 6. **Intent Recognition**: Uses regex to pre-extract concrete goals (amounts and dates) from user messages before passing them to the LLM for feasibility analysis.
 7. **Performance Optimization**: Limits context window to the last 5 messages to balance coherence with token usage and latency.
 
-   ### **4.4 Dynamic Visualization**
+### **4.4 Dynamic Visualization**
 
 8. **Text-to-Chart:** A specialized Gemini system prompt converts user requests (e.g., “show my coffee spending”) into a strict JSON format compatible with the frontend’s Recharts library.
 9. **Frontend Rendering**: The React app dynamically selects the chart component (Pie, Bar, Line) based on the AI-generated configuration.
@@ -164,3 +166,14 @@ Interprets the deterministic data provided by the financial intelligence engine 
    1. Risks: If Optimus fails to flag a genuinely fraudulent transaction because it looked mathematically similar to a normal one, the user might not check their statement themselves, believing that Optimus has it handled.
 3. Algorithmic Bias in Anomaly Detection
    1. Risks: if a user consistently makes poor financial decisions, the model will learn this as “normal” and stop flagging it.
+  
+## **10\. Key Learnings**
+
+1. Relying solely on LLMs for financial math is risky. Combining deterministic ML with Generative AI provides a much more reliable and trustworthy user experience than using either in isolation.
+2. Being agile and pivoting when an idea doesn't pan out.
+3. Being mindful of scope creep especially given the time constraints.
+4. Structured outputs are essential for GenAI. Forcing Gemini to return strict JSON for visualizations and subscription detection was critical for integration with the frontend
+5. Limiting context window was a necessary trade-off between maintaining conversation coherence and managing latency/token costs.
+6. Rate limits get blow through very quick when working with LLMs. Important to use mock data to avoid wasting tokens in unnecessary LLM calls.
+7. Prioritization as a one-man team. Cutting corners intelligently. Prioritizing the user-facing features first for a MVP.
+8. Shipping a working end-to-end pipeline that demonstrates the concept is more important than fine-tuning a model for 1% better accuracy in a hackathon setting.
