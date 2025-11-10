@@ -15,9 +15,9 @@ import dateparser
 import numpy as np
 # --- Configuration ---
 
-load_dotenv() # Load API key from .env file
+load_dotenv() 
 app = Flask(__name__)
-CORS(app) # Add CORS support
+CORS(app)
 
 # --- Path Setup ---
 # Get the absolute path to the directory where this app.py file is located.
