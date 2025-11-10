@@ -26,9 +26,7 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 DATA_DIR = os.path.join(BASE_DIR, 'data')
 
 # --- Load Data From CSV (On Startup) ---
-# We load the data into memory when the app starts.
-# This is much faster for a hackathon than reading from the file on every API request.
-
+# load the data into memory when the app starts.
 def load_transactions_from_csv(filename="transactions.csv"):
     """Reads transactions from CSV, converting types."""
     transactions = []
@@ -613,8 +611,8 @@ def chat():
 
     === FINANCIAL DATA (THE SOURCE OF TRUTH) ===
     Income Profile: {INCOME_PROFILE}
-    Recent Spending Insights: {json.dumps(raw_insights[:3])}
-    Detected Anomalies: {json.dumps(anomalies[:3], default=str)}
+    Recent Spending Insights: {json.dumps(raw_insights)}
+    Detected Anomalies: {json.dumps(anomalies, default=str)}
     Recent anomalies (high spending events): {json.dumps(anomalies[:5], default=str)}
     Current Goal Status: {forecast_result if forecast_result else "None set"}
 
@@ -687,5 +685,4 @@ def get_stats():
 # --- Run the App ---
 
 if __name__ == '__main__':
-    # Debug=True is fine for a hackathon, but not for production
-    app.run(debug=True, port=5001)
+    app.run(debug=False, port=5001)
