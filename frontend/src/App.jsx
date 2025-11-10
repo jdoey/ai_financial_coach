@@ -877,7 +877,6 @@ function App() {
                     <Receipt className="w-6 h-6 mr-2" />
                     Transactions
                   </h2>
-                  {/* NEW: Tab Buttons */}
                   <div className="flex space-x-2 bg-gray-950/50 p-1 rounded-lg border border-gray-800/50">
                     <button
                       onClick={() => setActiveTxTab("recent")}
@@ -905,7 +904,6 @@ function App() {
                   </div>
                 </div>
 
-                {/* CONDITIONAL SEARCH: Hide search when in Unusual mode if you prefer, but keeping it for now */}
                 {activeTxTab === "recent" && (
                   <div className="mb-4 relative">
                     <Search className="w-5 h-5 absolute left-3 top-3 text-gray-500" />
@@ -961,11 +959,8 @@ function App() {
                     anomalies.map((tx, index) => (
                       <div
                         key={`anomaly-${index}`}
-                        // changed: 'items-center' to 'items-start' for better vertical alignment when expanded
-                        // added: 'flex-col' to allow stacking standard details above the explanation
                         className="group flex flex-col p-4 bg-red-950/10 rounded-xl border border-red-900/30 hover:border-red-500/50 hover:bg-red-950/20 transition-all duration-300 animate-in fade-in cursor-help"
                       >
-                        {/* Top Row: Standard Details */}
                         <div className="flex items-center justify-between w-full">
                           <div className="flex items-center space-x-4">
                             <div className="p-3 bg-red-900/20 rounded-lg border border-red-800/30 group-hover:border-red-500/50 transition-colors">
