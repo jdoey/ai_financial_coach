@@ -256,7 +256,6 @@ def call_gemini_forecast(goal_data):
         target_dt = datetime.strptime(goal_data['target_date'], "%Y-%m-%d")
         days_remaining = max(1, (target_dt - today).days)
         
-        # Use the global INCOME_PROFILE we calculated earlier
         monthly_income = INCOME_PROFILE.get('estimated_monthly_income', 0)
         daily_income = monthly_income / 30
         daily_spend = stats.get('avg_daily', 0)
@@ -308,7 +307,6 @@ def call_gemini_forecast(goal_data):
 
     try:
         response = model.generate_content(user_prompt)
-        # Clean up potential markdown from response if Gemini adds it
         clean_json = response.text.replace('```json', '').replace('```', '').strip()
         return json.loads(clean_json)
     except Exception as e:
@@ -362,7 +360,6 @@ def call_gemini_subscription_check(transactions):
         response = model.generate_content(user_prompt)
         text = response.text.strip()
 
-        # --- ROBUST FIX: Regex Extraction ---
         # This finds the first '[' and the last ']', ignoring everything else outside them.
         match = re.search(r'\[.*\]', text, re.DOTALL)
         
